@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="style.css" class="css">
+  
+  <title>Frontend Mentor | Results summary component</title>
+</head>
+<body>
+  <main>
+    <!-- Result Section (blue) -->
+    <div class="result">
+      <div class="result__broad">  
+        <h1 class="lavender">Your Result</h1>
+        <div class="result__circle">
+          <p class="result__score white">76</p>
+          <p class="lavender">of 100</p>
+        </div>
+        <p class="result__feedback white">Great</p>
+        <p class="result__ranking lavender">You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+
+      <!-- Summary Section -->
+      <div class="result__summary">
+        <h2>Summary</h2>
+        
+        <!-- Breakdown Section Rows -->
+        <div class="flex-row red">
+          <img src="assets/images/icon-reaction.svg">
+          <p>Reaction</p>
+          <p class="fraction">80 <span>/ 100</span></p>
+        </div>
+        <div class="flex-row yellow">
+          <img src="assets/images/icon-memory.svg">
+          <p>Memory</p>
+          <p class="fraction">92 <span>/ 100</span></p>
+        </div>
+        <div class="flex-row teal">
+          <img src="assets/images/icon-verbal.svg">
+          <p>Verbal</p>
+          <p class="fraction">61 <span>/ 100</span></p>
+        </div>
+        <div class="flex-row blue">
+          <img src="assets/images/icon-visual.svg">
+          <p>Visual</p>
+          <p class="fraction">72 <span>/ 100</span></p>
+        </div>
+
+        <!-- Continue Button-->
+        <button class="button white">Continue</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
