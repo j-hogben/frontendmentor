@@ -1,0 +1,160 @@
+/* Custom Variables */
+
+:root {
+  --clr-primary-pale-blue: 225, 100%, 94%;
+  --clr-primary-bright-blue: 245, 75%, 52%;
+
+  --clr-neutral-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-neutral-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-neutral-dark-blue: hsl(223, 47%, 23%);
+  --clr-neutral-lilac: hsl(249, 100%, 70%);
+
+  --font-family-base: 'Red Hat Display', sans-serif;
+
+  --font-weight-base: 500;
+  --font-weight-bold: 800;
+  --font-weight-bolder: 900;
+}
+
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Styles */
+
+main {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  padding: 1.5rem;
+  background-image: url(/images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: hsla(var(--clr-primary-pale-blue), 1);
+}
+
+.card {
+  font-family: var(--font-family-base);
+  color: var(--clr-neutral-desaturated-blue);
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  text-align: center;
+  max-width: 450px;
+  box-shadow: 0 1.5rem 2rem hsla(var(--clr-primary-bright-blue), .125);
+}
+
+.card-content {
+  display: grid;
+  padding: 10%;
+}
+
+h1 {
+  font-size: 1.875rem;
+  font-weight: var(--font-weight-bolder);
+  color: var(--clr-neutral-dark-blue);
+  padding: .25rem;
+}
+
+.summary-caption {
+  line-height: 1.6rem;
+  padding: 1rem;
+}
+
+/* Plan Details Section */
+
+.plan-flex {
+  background-color: var(--clr-neutral-very-pale-blue);
+  display: flex;
+  align-items: center;
+  border-radius: .5rem;
+  padding: 1.5rem;
+  margin: .5rem 0;
+}
+
+.plan-section {
+  margin-left: 1.2rem;
+}
+
+.plan-type {
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-neutral-dark-blue);
+}
+
+.plan-flex span {
+  display: block;
+  line-height: 1.625rem;
+}
+
+.plan-change {
+  margin-left: auto;
+}
+
+.plan-change a {
+  color: hsla(var(--clr-primary-bright-blue), .85);
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+  font-size: .875rem;
+}
+
+/* Bottom Buttons Section */
+
+button {
+  color: #fff;
+  font-weight: var(--font-weight-bold);
+  background-color: hsla(var(--clr-primary-bright-blue), 1);
+  transition: ease-out background-color 0.2s;
+  padding: 1rem;
+  margin: 1rem 0 1.5rem 0;
+  border: none;
+  border-radius: .5rem;
+  box-shadow: 0 1.5rem 1.25rem hsla(var(--clr-primary-bright-blue), .125);
+}
+
+.cancel-order a {
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-neutral-desaturated-blue);
+  transition: linear color 0.2s;
+}
+
+/* Active States Styling */
+p a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.plan-change a:hover {
+  text-decoration: none;
+  color: var(--clr-neutral-lilac);
+}
+
+button:hover {
+  background-color: var(--clr-neutral-lilac);
+}
+
+.cancel-order a:hover {
+  color: var(--clr-neutral-dark-blue);
+}
+
+/* Device Responivity */
+
+@media (min-width: 376px) {
+  main {
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-size: contain;
+  }
+}
